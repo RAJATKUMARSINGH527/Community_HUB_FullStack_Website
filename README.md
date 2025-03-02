@@ -48,6 +48,7 @@ git clone https://github.com/RAJATKUMARSINGH527/Community_HUB_FullStack_Website.
 cd project-repo
 ```
 🔹 2. Setup Backend
+
 1️⃣ Navigate to the backend folder:
 
 ```bash
@@ -104,6 +105,7 @@ Frontend runs on http://localhost:5173
 **🌍 Deployment Links**
 
 Frontend (Vercel): Live App *()* 
+
 Backend (Render): Live API *()* 
 
 
