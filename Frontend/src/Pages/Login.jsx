@@ -55,7 +55,6 @@
 // export default Login;
 
 
-
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
@@ -66,7 +65,8 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault(); // Prevent form from reloading the page
     setError("");
 
     if (!email || !password) {
@@ -92,7 +92,7 @@ const Login = () => {
         setError(data.message || "Invalid email or password");
       }
     } catch (err) {
-      setError("An error occurred. Please try again.",err);
+      setError("An error occurred. Please try again.");
     }
   };
 
@@ -107,27 +107,28 @@ const Login = () => {
 
         {error && <p className="error-message">{error}</p>}
 
-        <label>Email Address</label>
-        
-        <input
-          type="email"
-          placeholder="Email Address"
-          className="login-input"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        {/* Wrap in form */}
+        <form onSubmit={handleLogin}>
+          <label>Email Address</label>
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="login-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="Password"
-          className="login-input"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            className="login-input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-
-        <button className="login-button" onClick={handleLogin}>Log In</button>
+          <button type="submit" className="login-button">Log In</button>
+        </form>
 
         <p className="login-footer">
           Need an account? <Link to="/signup" className="signup-link">Register</Link>

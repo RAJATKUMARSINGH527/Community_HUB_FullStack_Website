@@ -8,11 +8,13 @@ require("dotenv").config();
 
 
 const app = express();
-app.use(cors({
-    origin: process.env.CLIENT_URL, // Allow frontend domain
-    credentials: true, // Allow cookies if needed
-    methods: ["GET", "POST", "PUT", "DELETE"] // Allow only GET, POST, PUT, DELETE
-}));
+// app.use(cors({
+//     origin: process.env.CLIENT_URL, // Allow frontend domain
+//     credentials: true, // Allow cookies if needed
+//     methods: ["GET", "POST", "PUT", "DELETE"] // Allow only GET, POST, PUT, DELETE
+// }));
+app.use(cors());
+
 app.use(express.json());
 
 app.use('/auth', authRoutes);
