@@ -99,7 +99,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/signup", {
+      const response = await fetch("http://localhost:5000/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -132,6 +132,7 @@ const Signup = () => {
         <input
           type="text"
           className="signup-input"
+          placeholder="Username..."
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
@@ -140,6 +141,7 @@ const Signup = () => {
         <input
           type="email"
           className="signup-input"
+          placeholder="Email Address..."
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -148,6 +150,7 @@ const Signup = () => {
         <input
           type="password"
           className="signup-input"
+          placeholder="Password..."
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -156,6 +159,7 @@ const Signup = () => {
         <input
           type="password"
           className="signup-input"
+          placeholder="Confirm Password..."
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />

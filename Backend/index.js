@@ -11,6 +11,7 @@ const app = express();
 app.use(cors({
     origin: process.env.CLIENT_URL, // Allow frontend domain
     credentials: true, // Allow cookies if needed
+    methods: ["GET", "POST", "PUT", "DELETE"] // Allow only GET, POST, PUT, DELETE
 }));
 app.use(express.json());
 
@@ -18,10 +19,11 @@ app.use('/auth', authRoutes);
 app.use('/posts', postRoutes);
 app.use('/users', userRoutes);
 
-app.listen(3030, ()=>{
+app.listen(5000, async()=>{
     try {
-        console.log("Server is running on http://localhost:3030");
-        connectDB();
+        await connectDB();
+        console.log("Server is running on http://localhost:5000");
+        
     } catch (error) {
         console.log(error);
     }

@@ -124,14 +124,14 @@ Frontend runs on http://localhost:5173
 | GET | `/users/:id` | Get user profile by ID | N/A |
 
 
-**🌍 Deployment Links**
+### 🌍 Deployment Links
 
 Frontend (Vercel): Live App *(https://community-hub-full-stack-website.vercel.app/)* 
 
 Backend (Render): Live API *()* 
 
 
-**📹 Video Presentation**
+### 📹 Video Presentation
 
 🎥 Watch the project demo here: Google Drive Link *(https://drive.google.com/drive/folders/1Gd93ch_Zgfd7XiPbXOqnorz1NJjSyv4q?usp=drive_link)* 
 
