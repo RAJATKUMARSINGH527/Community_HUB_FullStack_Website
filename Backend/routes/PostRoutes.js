@@ -13,8 +13,9 @@ const { authMiddleware, roleMiddleware } = require("../middleware/authMiddleware
 
 const router = express.Router();
 
-router.post("/:postId/comments", authMiddleware, AddComment);
+
 router.post('/upload',authMiddleware, upload.single('media'),AddPost);
+router.post("/:postId/comments", authMiddleware, AddComment);
 router.get('/',getAllPost);
 router.get('/:id',authMiddleware, getPostById);
 router.put('/:id',authMiddleware, updatePost);
