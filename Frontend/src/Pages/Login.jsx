@@ -60,6 +60,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -69,8 +70,8 @@ const Login = () => {
     e.preventDefault(); // Prevent form from reloading the page
     setError("");
 
-    if (!email || !password) {
-      setError("Both fields are required");
+    if (!email || !password || !username) {
+      setError("Every fields are required");
       return;
     }
 
@@ -109,10 +110,18 @@ const Login = () => {
 
         {/* Wrap in form */}
         <form onSubmit={handleLogin}>
+        <label>Username</label>
+          <input
+            type="text"
+            placeholder="Username..."
+            className="login-input"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
           <label>Email Address</label>
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="Email Address..."
             className="login-input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -121,7 +130,7 @@ const Login = () => {
           <label>Password</label>
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Password..."
             className="login-input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
