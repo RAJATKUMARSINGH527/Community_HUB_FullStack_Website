@@ -45,14 +45,14 @@ Built with **React (frontend), Node.js/Express (backend), and MongoDB (database)
 ```bash
 git clone https://github.com/RAJATKUMARSINGH527/Community_HUB_FullStack_Website.git
 
-cd project-repo
+cd Community_HUB_FullStack_Website
 ```
 🔹 2. Setup Backend
 
 1️⃣ Navigate to the backend folder:
 
 ```bash
-cd backend
+cd Backend
 
 ```
 
@@ -82,7 +82,7 @@ Backend runs on http://localhost:5000
 1️⃣ Navigate to the frontend folder:
 
 ```bash
-cd ../frontend
+cd ../Frontend
 
 ```
 
