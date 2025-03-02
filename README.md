@@ -30,7 +30,7 @@ Built with **React (frontend), Node.js/Express (backend), and MongoDB (database)
 - Express.js (API framework)
 - MongoDB + Mongoose (Database)
 - JWT (Authentication)
-- Bcrypt.js (Password encryption)
+- Bcrypt (Password encryption)
 
 #### **Deployment**
 - **Frontend:** Vercel  
