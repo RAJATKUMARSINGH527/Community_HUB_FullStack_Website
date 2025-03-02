@@ -128,7 +128,7 @@ Frontend runs on http://localhost:5173
 
 Frontend (Vercel): Live App *(https://community-hub-full-stack-website.vercel.app/)* 
 
-Backend (Render): Live API *()* 
+Backend (Render): Live API *(https://community-hub-fullstack-website.onrender.com)* 
 
 
 ### 📹 Video Presentation
