@@ -22,7 +22,7 @@ Built with **React (frontend), Node.js/Express (backend), and MongoDB (database)
 #### **Frontend (React + Vite)**
 - React.js (UI framework)
 - React Router (Navigation)
-- CSS3 (Styling)
+- Cascading Style Sheets 3 (Styling)
 - Axios (API calls)
 
 #### **Backend (Node.js + Express)**
