@@ -101,6 +101,28 @@ npm run dev
 ```
 Frontend runs on http://localhost:5173
 
+## 🛠️ API Endpoints  
+
+### 🔹 Authentication Routes
+| Method | Endpoint | Description | Request Body |
+|--------|---------|-------------|--------------|
+| POST | `/api/auth/register` | Register a new user | `{ "name": "John", "email": "john@example.com", "password": "123456" }` |
+| POST | `/api/auth/login` | Login user | `{ "email": "john@example.com", "password": "123456" }` |
+
+### 🔹 Post Routes
+| Method | Endpoint | Description | Request Body |
+|--------|---------|-------------|--------------|
+| POST | `/api/posts` | Create a post | `{ "title": "Post Title", "content": "Post Content" }` |
+| GET | `/api/posts` | Get all posts | N/A |
+| GET | `/api/posts/:id` | Get a single post by ID | N/A |
+| PUT | `/api/posts/:id` | Update a post | `{ "title": "Updated Title", "content": "Updated Content" }` |
+| DELETE | `/api/posts/:id` | Delete a post | N/A |
+
+### 🔹 User Routes
+| Method | Endpoint | Description | Request Body |
+|--------|---------|-------------|--------------|
+| GET | `/api/users/:id` | Get user profile by ID | N/A |
+
 
 **🌍 Deployment Links**
 
