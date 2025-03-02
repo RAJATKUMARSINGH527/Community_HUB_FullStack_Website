@@ -5,7 +5,7 @@ This platform enables users to **share ideas, collaborate, and interact** in a s
 
 Built with **React (frontend), Node.js/Express (backend), and MongoDB (database)**, this project showcases full-stack development.  
 
-🔗 **Live Demo:** [Click here to view the deployed application](#) *()*  
+🔗 **Live Demo:** [Click here to view the deployed application](#) *(https://community-hub-full-stack-website.vercel.app/)*  
 
 ---
 
@@ -104,7 +104,7 @@ Frontend runs on http://localhost:5173
 
 **🌍 Deployment Links**
 
-Frontend (Vercel): Live App *()* 
+Frontend (Vercel): Live App *(https://community-hub-full-stack-website.vercel.app/)* 
 
 Backend (Render): Live API *()* 
 
