@@ -24,7 +24,7 @@ const Login = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({username, email, password }),
       });
 
       const data = await response.json();
@@ -32,6 +32,7 @@ const Login = () => {
         console.log("Login successful", data);
         localStorage.setItem("token", data.token);
         navigate("/dashboard");
+        alert(data.message);
       } else {
         setError(data.message || "Invalid email or password");
       }
@@ -53,7 +54,7 @@ const Login = () => {
 
         {/* Wrap in form */}
         <form onSubmit={handleLogin}>
-        <label>Username</label>
+          <label>Username</label>
           <input
             type="text"
             placeholder="Username..."
@@ -79,11 +80,16 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button type="submit" className="login-button">Log In</button>
+          <button type="submit" className="login-button">
+            Log In
+          </button>
         </form>
 
         <p className="login-footer">
-          Need an account? <Link to="/signup" className="signup-link">Register</Link>
+          Need an account?{" "}
+          <Link to="/signup" className="signup-link">
+            Register
+          </Link>
         </p>
       </div>
     </div>

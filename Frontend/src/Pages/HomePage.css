@@ -110,7 +110,11 @@ body {
 .link :hover{
 
   background: linear-gradient(90deg, #6366F1, #e1ddd7);
-  -webkit-background-clip: text;
+  -webkit-background-clip: text;  /* Safari, Chrome */
+  -moz-background-clip: text;     /* Firefox */
+  -ms-background-clip: text;      /* Edge (older versions) */
+  -o-background-clip: text;       /* Opera */
+  background-clip: text;          /* Standard property */
   -webkit-text-fill-color: transparent;
 
 }

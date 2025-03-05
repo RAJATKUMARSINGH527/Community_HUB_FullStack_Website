@@ -36,6 +36,7 @@ const Signup = () => {
       if (response.ok) {
         console.log("Signup successful", data);
         navigate("/login"); // Redirect after successful signup
+        alert(data.message);
       } else {
         setError(data.message || "Signup failed");
       }
