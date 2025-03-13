@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/posts", {
+      const response = await fetch("https://community-hub-fullstack-website.onrender.com/posts", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

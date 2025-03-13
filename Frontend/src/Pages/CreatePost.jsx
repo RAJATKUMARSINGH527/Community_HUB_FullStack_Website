@@ -29,7 +29,7 @@ const CreatePost = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/posts/upload", {
+      const response = await fetch("https://community-hub-fullstack-website.onrender.com/posts/upload", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${localStorage.getItem("token")}`,
